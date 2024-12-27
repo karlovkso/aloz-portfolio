@@ -6,7 +6,7 @@ import PageLoader from "./Components/PageLoader.jsx";
 import Particles from "./Components/Particles.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+  <StrictMode basename="/aloz-portfolio">
     <PageLoader />
     <Particles />
     <div id="page">
