@@ -2,6 +2,14 @@ import React from "react";
 import Hero from "../assets/alo.png";
 
 export default function Home() {
+  // Scroll handler
+  const handleScrollToSkills = () => {
+    const skillsSection = document.getElementById("skills");
+    if (skillsSection) {
+      skillsSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div
       id="landing"
@@ -30,7 +38,10 @@ export default function Home() {
           </p>
           <p className="mt-16 mb-0 sm:mb-36">
             Learn more{" "}
-            <button className="text-accent hover:text-accent hover:font-semibold transition duration-300">
+            <button
+              className="text-accent hover:text-accent hover:font-semibold transition duration-300"
+              onClick={handleScrollToSkills}
+            >
               about me.
             </button>
           </p>
