@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <div
       id="skills"
-      className="flex flex-col md:flex-row md:justify-start mx-5 mr-24 md:mx-20 pt-10 md:pt-20 mt-10"
+      className="flex flex-col md:flex-row md:justify-start mx-5 mr-28 md:mx-20 pt-10 md:pt-20 mt-10"
     >
       <div className="text-base-content md:mr-36">
         <div className="font-bold text-3xl md:text-4xl">
