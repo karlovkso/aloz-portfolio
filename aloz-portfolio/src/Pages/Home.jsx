@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "../assets/alo.png";
+import Hero from "../assets/alo.webp";
 
 export default function Home() {
   // Scroll handler

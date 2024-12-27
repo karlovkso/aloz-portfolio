@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import WIP from "../assets/wip.svg";
-import underMaintenance from "../assets/undermaintenance.jpg";
+import underMaintenance from "../assets/undermaintenance.webp";
 
 const modalContent = {
   Project1: {

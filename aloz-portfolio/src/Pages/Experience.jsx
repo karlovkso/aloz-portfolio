@@ -1,17 +1,17 @@
 import React, { useState } from "react";
-import pup from "../assets/modal/pup.jpg";
-import pup2 from "../assets/modal/pup2.jpg";
-import coe from "../assets/modal/coe.jpg";
-import coe2 from "../assets/modal/coe2.jpg";
-import coe3 from "../assets/modal/coe3.jpg";
-import equicom from "../assets/modal/equicom.png";
-import equi from "../assets/modal/equi.jpg";
-import equi2 from "../assets/modal/equi2.jpg";
-import equi3 from "../assets/modal/equi3.jpg";
-import vctnads from "../assets/modal/vctnads.png";
-import vct from "../assets/modal/vct.jpg";
-import vct2 from "../assets/modal/vct2.jpg";
-import vct3 from "../assets/modal/vct3.jpg";
+import pup from "../assets/modal/pup.webp";
+import pup2 from "../assets/modal/pup2.webp";
+import coe from "../assets/modal/coe.webp";
+import coe2 from "../assets/modal/coe2.webp";
+import coe3 from "../assets/modal/coe3.webp";
+import equicom from "../assets/modal/equicom.webp";
+import equi from "../assets/modal/equi.webp";
+import equi2 from "../assets/modal/equi2.webp";
+import equi3 from "../assets/modal/equi3.webp";
+import vctnads from "../assets/modal/vctnads.webp";
+import vct from "../assets/modal/vct.webp";
+import vct2 from "../assets/modal/vct2.webp";
+import vct3 from "../assets/modal/vct3.webp";
 
 const modalContent = {
   PUP: {
