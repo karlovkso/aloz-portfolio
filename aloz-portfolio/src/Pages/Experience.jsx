@@ -70,7 +70,7 @@ export default function Experience() {
               </button>
               <br />
               <button
-                className="hover:text-accent hover:font-semibold transition duration-300"
+                className="hover:text-accent hover:font-semibold transition duration-300 text-start"
                 onClick={() => openModal("Course")}
               >
                 Bachelor of Science in Computer Engineering

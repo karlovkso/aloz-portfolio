@@ -8,7 +8,7 @@ export default function Home() {
       id="landing"
       className="flex-wrap sm:flex justify-start mx-5 md:mx-20 pt-40"
     >
-      <div className="text-base-content lg:mr-40 md:mr-0">
+      <div className="text-base-content lg:mr-40 md:mr-0 mr-24">
         <div className="font-bold text-4xl">
           <p>
             Hello,
@@ -42,7 +42,7 @@ export default function Home() {
         <img
           src={Hero}
           alt="Karlo Vequiso's Picture"
-          className="w-96 mt-4 align-center mx-auto mr-24 sm:absolute"
+          className="w-96 lg:w-96 mt-4 align-center mx-auto sm:absolute"
         />
       </div>
 
