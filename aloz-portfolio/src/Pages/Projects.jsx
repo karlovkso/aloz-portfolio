@@ -72,7 +72,7 @@ export default function Projects() {
         id="projects"
         className="px-5 mr-24 sm:px-10 md:px-20 pt-8 mt-20 mb-10"
       >
-        <p className="font-bold text-base-content text-3xl md:text-4xl text-center sm:text-left">
+        <p className="font-bold text-base-content text-3xl md:text-4xl text-start sm:text-left">
           Projects
         </p>
       </div>

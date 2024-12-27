@@ -100,7 +100,7 @@ export default function Experience() {
       >
         <div className="text-base-content w-full md:w-2/3">
           <div className="font-bold text-3xl md:text-4xl">
-            <p className="text-center md:text-left">Education</p>
+            <p className="text-start md:text-left">Education</p>
           </div>
           <div className="font-normal text-base md:text-lg mt-5 mb-14">
             <p>
@@ -134,7 +134,7 @@ export default function Experience() {
           <div className="divider"></div>
 
           <div className="font-bold text-3xl md:text-4xl mt-14">
-            <p className="text-center md:text-left">Experience</p>
+            <p className="text-start md:text-left">Experience</p>
           </div>
           <div className="font-normal text-base md:text-lg mt-10">
             <p>
