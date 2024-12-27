@@ -57,7 +57,10 @@ function Sidebar() {
   };
 
   return (
-    <div className="space-y-6">
+    <div
+      id="sidebar"
+      className="text-base-content text-center pt-56 pr-0 xl:pr-20 fixed top-0 right-0 z-50 h-full bg-base-200 xl:bg-transparent space-y-6"
+    >
       {sections.map(({ id, label }) => (
         <div key={id}>
           <button

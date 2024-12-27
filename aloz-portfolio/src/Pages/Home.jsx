@@ -1,5 +1,4 @@
 import React from "react";
-import Sidebar from "../Components/Sidebar";
 import Hero from "../assets/alo.png";
 
 export default function Home() {
@@ -44,13 +43,6 @@ export default function Home() {
           alt="Karlo Vequiso's Picture"
           className="w-96 lg:w-96 mt-4 align-center mx-auto sm:absolute"
         />
-      </div>
-
-      <div
-        id="sidebar"
-        className="text-base-content text-center pt-56 pr-0 xl:pr-20 fixed top-0 right-0 z-50 h-full bg-base-200 xl:bg-transparent"
-      >
-        <Sidebar />
       </div>
     </div>
   );
