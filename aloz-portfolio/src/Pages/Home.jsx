@@ -52,7 +52,7 @@ export default function Home() {
         <img
           src={Hero}
           alt="Karlo Vequiso's Picture"
-          className="w-96 lg:w-96 mt-4 align-center mx-auto sm:absolute"
+          className="w-96 lg:w-96 mt-4 align-center mx-auto relative"
         />
       </div>
     </div>
