@@ -2,8 +2,8 @@ import React from "react";
 
 function Header() {
   return (
-    <header id="Header">
-      <div className="navbar justify-center text-2xl pt-8">
+    <header id="header">
+      <div className="navbar navbar-center flex justify-center text-2xl pt-8 absolute">
         <a href="/" className="font-bold text-base-content">
           ALOZ
         </a>

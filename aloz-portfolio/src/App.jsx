@@ -1,6 +1,4 @@
 import React from "react";
-import PageLoader from "./Components/PageLoader";
-import Particles from "./Components/Particles";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
@@ -12,8 +10,6 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <PageLoader />
-      <Particles />
       <Header />
       <Home />
       <Skills />
