@@ -7,7 +7,7 @@ function Header() {
         <a href="/aloz-portfolio" className="font-bold text-base-content">
           ALOZ
         </a>
-        <a href="/" className="font-black pl-1 text-accent">
+        <a href="/aloz-portfolio" className="font-black pl-1 text-accent">
           .
         </a>
       </div>
