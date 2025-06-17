@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div id="landing" className="flex-wrap sm:flex justify-start pt-40">
-      <div className="text-base-content lg:mr-40 md:mr-0 mr-24 mx-5 md:mx-20">
+      <div className="text-base-content lg:mr-40 md:mr-0 mr-24 mx-5 md:mx-20 z-50">
         <div className="font-bold text-4xl">
           <p>
             Hello,
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center relative md:absolute w-full mr-5">
+      <div className="flex justify-center relative md:absolute w-full mr-5 z-40">
         <img src={Hero} alt="Karlo Vequiso's Picture" className="w-96" />
       </div>
     </div>
