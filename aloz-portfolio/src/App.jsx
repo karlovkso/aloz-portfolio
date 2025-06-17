@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
 import Experience from "./Pages/Experience";
+import Projects from "./Pages/Projects.jsx";
 import Footer from "./Components/Footer";
 import Particles from "./Components/Particles.jsx";
 import Sidebar from "./Components/Sidebar.jsx";
@@ -17,6 +18,7 @@ function App() {
       <Home />
       <Skills />
       <Experience />
+      <Projects />
       <Footer />
     </div>
   );

@@ -1,7 +1,8 @@
 import React from "react";
-import IconPLO from "../Components/IconPLO";
+import IconPL from "../Components/IconPL";
 import IconLF from "../Components/IconLF";
 import IconTI from "../Components/IconTI";
+import IconDB from "../Components/IconDB";
 
 export default function Skills() {
   return (
@@ -13,12 +14,23 @@ export default function Skills() {
         <div className="font-bold text-3xl md:text-4xl">
           <p>
             Programming
-            <span className="text-accent"> Languages & Others</span>
+            <span className="text-accent"> Languages</span>
           </p>
         </div>
 
         <div>
-          <IconPLO />
+          <IconPL />
+        </div>
+
+        <div className="font-bold text-3xl mt-14 md:text-4xl">
+          <p>
+            Data
+            <span className="text-accent">bases</span>
+          </p>
+        </div>
+
+        <div>
+          <IconDB />
         </div>
 
         <div className="font-bold text-3xl md:text-4xl mt-14 md:mt-20">
