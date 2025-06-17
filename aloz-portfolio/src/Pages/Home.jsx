@@ -11,11 +11,8 @@ export default function Home() {
   };
 
   return (
-    <div
-      id="landing"
-      className="flex-wrap sm:flex justify-start mx-5 md:mx-20 pt-40"
-    >
-      <div className="text-base-content lg:mr-40 md:mr-0 mr-24">
+    <div id="landing" className="flex-wrap sm:flex justify-start pt-40">
+      <div className="text-base-content lg:mr-40 md:mr-0 mr-24 mx-5 md:mx-20">
         <div className="font-bold text-4xl">
           <p>
             Hello,
@@ -48,12 +45,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div>
-        <img
-          src={Hero}
-          alt="Karlo Vequiso's Picture"
-          className="w-96 lg:w-96 mt-4 align-center mx-auto relative"
-        />
+      <div className="flex justify-center relative md:absolute w-full mr-5">
+        <img src={Hero} alt="Karlo Vequiso's Picture" className="w-96" />
       </div>
     </div>
   );
