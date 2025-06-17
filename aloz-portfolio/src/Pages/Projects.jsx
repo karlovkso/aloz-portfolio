@@ -122,7 +122,7 @@ export default function Projects() {
               className="h-36 sm:h-48 md:h-72 md:w-80"
             />
           </div>
-          <div className="text-justify mt-5 p-0 sm:p-1 md:p-5 ">
+          <div className="text-justify mt-5">
             The VitalTrack system was developed using a combination of
             programming languages tailored to different components: C# with
             ASP.NET MVC for the website, C++ for programming the sensor modules,
