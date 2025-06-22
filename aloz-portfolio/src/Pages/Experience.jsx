@@ -38,7 +38,7 @@ export default function Experience() {
           <div className="font-bold text-3xl md:text-4xl mt-14">
             <p className="text-start md:text-left">Experience</p>
           </div>
-          <div className="font-normal text-base md:text-lg mt-10">
+          <div className="font-normal text-base md:text-lg mt-5">
             <p>
               <span className="text-accent font-semibold">
                 December 2024 – January 2025
