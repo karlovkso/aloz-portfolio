@@ -69,12 +69,12 @@ export default function Projects() {
               <br />
               <span className="text-start">February 2025 - June 2025</span>
               <br />
-              <span className="text-start">BS Computer Engineering Thesis</span>
+              <span className="text-start">BSCpE Thesis</span>
               <br />
               <span className="text-start">Full-Stack Software Engineer</span>
               <br />
               <span className="text-start">
-                Programming Languages Used: C#, C++, and Python
+                Languages Used: C#, Python, and C++
               </span>
             </p>
           </div>
@@ -123,36 +123,61 @@ export default function Projects() {
             />
           </div>
           <div className="text-justify mt-5">
-            The VitalTrack system was developed using a combination of
-            programming languages tailored to different components: C# with
-            ASP.NET MVC for the website, C++ for programming the sensor modules,
-            and Python with the Kivy framework for the graphical user interface
-            (GUI) of the prototype. <br /> <br />
-            VitalTrack integrates several hardware platforms—Arduino Mega,
-            ESP32, and Raspberry Pi—to accurately measure four essential health
-            indicators: blood pressure (BP), pulse rate (PR), oxygen saturation
-            (SpO₂), and body temperature (BT). This integration significantly
-            streamlines the traditionally manual and time-consuming process of
-            patient assessment. The prototype is designed to store collected
-            data locally when internet connectivity is unavailable or transmit
-            the data directly to the website when online, ensuring continuous
-            and reliable data management. <br />
+            The <strong>VitalTrack</strong> system was developed using a
+            combination of programming languages tailored to different
+            components:
+            <ul className="list-disc list-inside ml-4">
+              <li>💻 C# with ASP.NET MVC – for the website</li>
+              <li>⚙️ C++ – for sensor module programming</li>
+              <li>🐍 Python (Kivy framework) – for the prototype GUI</li>
+            </ul>
             <br />
-            The VitalTrack website supports two primary user roles: users and
-            administrators. Users have the capability to add or remove patient
-            records, input new readings for patients, and access a comprehensive
-            dashboard displaying patients’ historical health data. Additionally,
-            users can request specific patient reading records, which, upon
-            approval by an administrator, are securely sent directly to the
-            patient’s email address. For enhanced security, these records are
-            embedded with password protection.
+            VitalTrack integrates several hardware platforms—
+            <strong>Arduino Mega, ESP32, and Raspberry Pi</strong>—to accurately
+            measure four essential health indicators:
+            <ul className="list-disc list-inside ml-4">
+              <li>🩸 Blood Pressure (BP)</li>
+              <li>❤️ Pulse Rate (PR)</li>
+              <li>🫁 Oxygen Saturation (SpO₂)</li>
+              <li>🌡️ Body Temperature (BT)</li>
+            </ul>
             <br />
-            <br /> Administrators have elevated privileges, including managing
-            user accounts, handling data access requests, and monitoring the
-            system’s audit trail to ensure transparency and accountability. To
-            safeguard sensitive health information, the system incorporates
-            multiple layers of security, such as two-factor authentication and
-            other advanced protective measures.
+            This integration significantly streamlines the traditionally manual
+            and time-consuming process of patient assessment. The prototype is
+            designed to store collected data locally when{" "}
+            <strong>offline</strong> or transmit the data directly to the
+            website when <strong>online</strong>, ensuring continuous and
+            reliable data management. <br />
+            <br />
+            <p>
+              <strong>User Roles:</strong>
+            </p>
+            <p>
+              👥 <strong>Users:</strong>
+            </p>
+            <ul className="list-disc list-inside ml-4">
+              <li>➕ Add / remove patient records</li>
+              <li>📈 Input new readings and view history</li>
+              <li>
+                📬 Request patient records (sent via email upon admin approval)
+              </li>
+              <li>🔒 Records are password-protected for security</li>
+            </ul>
+            <br />
+            <p>
+              🛡️ <strong>Administrators:</strong>
+            </p>
+            <ul className="list-disc list-inside ml-4">
+              <li>👤 Manage user accounts</li>
+              <li>📂 Approve data access requests</li>
+              <li>📝 Monitor audit trails for transparency</li>
+            </ul>
+            <br />
+            <p>
+              🔐 <strong>Security Features: </strong>
+              Two-factor authentication and multi-layer protection to secure
+              sensitive health information.
+            </p>
           </div>
         </div>
         <form method="dialog" className="modal-backdrop">

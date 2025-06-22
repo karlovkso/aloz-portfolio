@@ -36,7 +36,6 @@ function Footer() {
             type="button"
             className="flex flex-col items-center focus:outline-none hover:text-accent hover:font-bold transition-all duration-300"
             onClick={handleCopyPhone}
-            title="Copy phone number"
           >
             <div className="flex justify-center items-center">
               <svg
@@ -81,6 +80,7 @@ function Footer() {
           <a
             href="https://www.linkedin.com/in/karlo-vequiso/"
             className="hover:text-accent hover:font-bold transition-all duration-300"
+            target="_blank"
           >
             <div className="flex justify-center items-center">
               <svg
