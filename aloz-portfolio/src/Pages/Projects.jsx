@@ -128,8 +128,8 @@ export default function Projects() {
             components:
             <ul className="list-disc list-inside ml-4">
               <li>💻 C# with ASP.NET MVC – for the website</li>
-              <li>⚙️ C++ – for sensor module programming</li>
               <li>🐍 Python (Kivy framework) – for the prototype GUI</li>
+              <li>⚙️ C++ – for sensor module programming</li>
             </ul>
             <br />
             VitalTrack integrates several hardware platforms—

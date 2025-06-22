@@ -41,6 +41,18 @@ export default function Experience() {
           <div className="font-normal text-base md:text-lg mt-10">
             <p>
               <span className="text-accent font-semibold">
+                December 2024 – January 2025
+              </span>
+              <br />
+              <span>Freelancing</span>
+              <br />
+              <span>Project-Based Software Developer</span>
+            </p>
+          </div>
+
+          <div className="font-normal text-base md:text-lg mt-5">
+            <p>
+              <span className="text-accent font-semibold">
                 September 2024 – October 2024
               </span>
               <br />
