@@ -56,7 +56,7 @@ export default function Projects() {
           <div className="font-bold text-3xl md:text-4xl">
             <p className="text-start md:text-left">Projects</p>
           </div>
-          <div className="font-normal text-base md:text-lg mt-10 mb-14 ">
+          <div className="font-normal text-base md:text-lg mt-5 mb-14 ">
             <p>
               <button
                 className="font-bold text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300"
@@ -64,7 +64,8 @@ export default function Projects() {
                   document.getElementById("my_modal_4").showModal()
                 }
               >
-                VITALTRACK
+                VITALTRACK{" "}
+                <i class="fa-sharp  fa-solid fa-up-right-and-down-left-from-center fa-xs"></i>
               </button>
               <br />
               <span className="text-start">February 2025 - June 2025</span>
@@ -127,19 +128,19 @@ export default function Projects() {
             combination of programming languages tailored to different
             components:
             <ul className="list-disc list-inside ml-4">
-              <li>💻 C# with ASP.NET MVC – for the website</li>
-              <li>🐍 Python (Kivy framework) – for the prototype GUI</li>
-              <li>⚙️ C++ – for sensor module programming</li>
+              <li>C# with ASP.NET MVC – for the website</li>
+              <li>Python (Kivy framework) – for the prototype GUI</li>
+              <li>C++ – for sensor module programming</li>
             </ul>
             <br />
             VitalTrack integrates several hardware platforms—
             <strong>Arduino Mega, ESP32, and Raspberry Pi</strong>—to accurately
             measure four essential health indicators:
             <ul className="list-disc list-inside ml-4">
-              <li>🩸 Blood Pressure (BP)</li>
-              <li>❤️ Pulse Rate (PR)</li>
-              <li>🫁 Oxygen Saturation (SpO₂)</li>
-              <li>🌡️ Body Temperature (BT)</li>
+              <li>Blood Pressure (BP)</li>
+              <li>Pulse Rate (PR)</li>
+              <li>Oxygen Saturation (SpO₂)</li>
+              <li>Body Temperature (BT)</li>
             </ul>
             <br />
             This integration significantly streamlines the traditionally manual
@@ -150,31 +151,28 @@ export default function Projects() {
             reliable data management. <br />
             <br />
             <p>
-              <strong>User Roles:</strong>
-            </p>
-            <p>
-              👥 <strong>Users:</strong>
+              <strong>Users:</strong>
             </p>
             <ul className="list-disc list-inside ml-4">
-              <li>➕ Add / remove patient records</li>
-              <li>📈 Input new readings and view history</li>
+              <li>Add / remove patient records</li>
+              <li>Input new readings and view history</li>
               <li>
-                📬 Request patient records (sent via email upon admin approval)
+                Request patient records (sent via email upon admin approval)
               </li>
-              <li>🔒 Records are password-protected for security</li>
+              <li>Records are password-protected for security</li>
             </ul>
             <br />
             <p>
-              🛡️ <strong>Administrators:</strong>
+              <strong>Administrators:</strong>
             </p>
             <ul className="list-disc list-inside ml-4">
-              <li>👤 Manage user accounts</li>
-              <li>📂 Approve data access requests</li>
-              <li>📝 Monitor audit trails for transparency</li>
+              <li>Manage user accounts</li>
+              <li>Approve data access requests</li>
+              <li>Monitor audit trails for transparency</li>
             </ul>
             <br />
             <p>
-              🔐 <strong>Security Features: </strong>
+              <strong>Security Features: </strong>
               Two-factor authentication and multi-layer protection to secure
               sensitive health information.
             </p>

@@ -28,7 +28,7 @@ export default function Experience() {
               {/* <button
                 className="hover:text-accent hover:font-semibold transition duration-300"
               >
-                Cum Laude
+                Magna Cum Laude
               </button> */}
             </p>
           </div>
