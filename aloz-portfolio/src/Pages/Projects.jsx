@@ -149,33 +149,6 @@ export default function Projects() {
             <strong>offline</strong> or transmit the data directly to the
             website when <strong>online</strong>, ensuring continuous and
             reliable data management. <br />
-            <br />
-            <p>
-              <strong>Users:</strong>
-            </p>
-            <ul className="list-disc list-inside ml-4">
-              <li>Add / remove patient records</li>
-              <li>Input new readings and view history</li>
-              <li>
-                Request patient records (sent via email upon admin approval)
-              </li>
-              <li>Records are password-protected for security</li>
-            </ul>
-            <br />
-            <p>
-              <strong>Administrators:</strong>
-            </p>
-            <ul className="list-disc list-inside ml-4">
-              <li>Manage user accounts</li>
-              <li>Approve data access requests</li>
-              <li>Monitor audit trails for transparency</li>
-            </ul>
-            <br />
-            <p>
-              <strong>Security Features: </strong>
-              Two-factor authentication and multi-layer protection to secure
-              sensitive health information.
-            </p>
           </div>
         </div>
         <form method="dialog" className="modal-backdrop">
