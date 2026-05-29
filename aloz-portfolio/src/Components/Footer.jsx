@@ -1,24 +1,31 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import { copyTextToClipboard } from "../services/clipboardService";
 
 function Footer() {
+  const [copyFeedback, setCopyFeedback] = useState("");
+
+  useEffect(() => {
+    if (!copyFeedback) return undefined;
+
+    const timer = window.setTimeout(() => {
+      setCopyFeedback("");
+    }, 2500);
+
+    return () => window.clearTimeout(timer);
+  }, [copyFeedback]);
+
   const handleCopyPhone = async () => {
     try {
-      await navigator.clipboard.writeText("09853682632");
+      await copyTextToClipboard("09853682632");
+      setCopyFeedback("copied to clipboard");
       if (window.toast) {
         window.toast("copied to clipboard");
-      } else {
-        // fallback: create a simple toast
-        const toast = document.createElement("div");
-        toast.innerText = "copied to clipboard";
-        toast.className =
-          "toast toast-top toast-end z-50 fixed right-4 top-4 bg-accent text-base-100 px-4 py-2 rounded shadow";
-        document.body.appendChild(toast);
-        setTimeout(() => {
-          toast.remove();
-        }, 2000);
       }
-    } catch (e) {
-      // ignore
+    } catch {
+      setCopyFeedback("copy failed");
+      if (window.toast) {
+        window.toast("copy failed");
+      }
     }
   };
 
@@ -52,6 +59,11 @@ function Footer() {
             </div>
             <div className="mt-5 text-center select-none">0985-368-2632</div>
           </button>
+          {copyFeedback && (
+            <p className="mt-2 text-center text-xs text-accent">
+              {copyFeedback}
+            </p>
+          )}
         </div>
 
         <div>
@@ -81,6 +93,7 @@ function Footer() {
             href="https://www.linkedin.com/in/karlo-vequiso/"
             className="hover:text-accent hover:font-bold transition-all duration-300"
             target="_blank"
+            rel="noreferrer"
           >
             <div className="flex justify-center items-center">
               <svg

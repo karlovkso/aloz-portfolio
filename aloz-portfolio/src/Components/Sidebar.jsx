@@ -1,35 +1,40 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { themeChange } from "theme-change";
+import { portfolioSections } from "../config/portfolioSections";
+import { scrollToSection } from "../utils/scrollNavigation";
 
-const sections = [
-  { id: "header", label: "Home" },
-  { id: "skills", label: "Skills" },
-  { id: "experience", label: "Experience" },
-  { id: "projects", label: "Projects" },
-  { id: "contact", label: "Contact" },
+const themeOptions = [
+  "synthwave",
+  "dark",
+  "valentine",
+  "luxury",
+  "halloween",
+  "retro",
+  "night",
+  "aqua",
 ];
 
 function Sidebar() {
   const [activeSection, setActiveSection] = useState(null);
   const [showArrow, setShowArrow] = useState(false);
 
-  const updateActiveSection = (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        setActiveSection(entry.target.id);
-      }
-    });
-  };
-
   useEffect(() => {
     themeChange(false);
+
+    const updateActiveSection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
 
     const observer = new IntersectionObserver(updateActiveSection, {
       root: null,
       threshold: 0.5,
     });
 
-    sections.forEach(({ id }) => {
+    portfolioSections.forEach(({ id }) => {
       const section = document.getElementById(id);
       if (section) {
         observer.observe(section);
@@ -45,15 +50,13 @@ function Sidebar() {
     document.addEventListener("scroll", toggleArrowButton);
 
     return () => {
+      observer.disconnect();
       document.removeEventListener("scroll", toggleArrowButton);
     };
   }, []);
 
-  const scrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+  const handleSectionNavigation = (sectionId) => {
+    scrollToSection(sectionId);
   };
 
   return (
@@ -61,14 +64,15 @@ function Sidebar() {
       id="sidebar"
       className="text-base-content text-center pt-56 pr-0 xl:pr-20 fixed top-0 right-0 z-50 h-full bg-base-200 xl:bg-transparent space-y-6"
     >
-      {sections.map(({ id, label }) => (
+      {portfolioSections.map(({ id, label }) => (
         <div key={id}>
           <button
+            type="button"
             id={`sb${id.charAt(0).toUpperCase() + id.slice(1)}`}
             className={`hover:text-accent hover:font-bold ease-in-out duration-300 ${
               activeSection === id ? "font-bold text-accent" : ""
             }`}
-            onClick={() => scrollToSection(id)}
+            onClick={() => handleSectionNavigation(id)}
           >
             {label}
           </button>
@@ -97,16 +101,7 @@ function Sidebar() {
           tabIndex="0"
           className="dropdown-content bg-base-300 rounded-box z-[1] w-50 shadow-2xl"
         >
-          {[
-            "synthwave",
-            "dark",
-            "valentine",
-            "luxury",
-            "halloween",
-            "retro",
-            "night",
-            "aqua",
-          ].map((theme) => (
+          {themeOptions.map((theme) => (
             <li key={theme}>
               <input
                 type="radio"
@@ -124,6 +119,7 @@ function Sidebar() {
       {showArrow && (
         <div>
           <button
+            type="button"
             id="arrowUp"
             className="btn btn-sm btn-outline rounded-full h-9 motion-safe:animate-bounce hover:btn-accent ease-in-out duration-300"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -1,3 +1,5 @@
+/* eslint-env node */
+/* global require */
 const flowbiteReact = require("flowbite-react/plugin/tailwindcss");
 
 /** @type {import('tailwindcss').Config} */

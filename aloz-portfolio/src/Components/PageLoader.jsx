@@ -1,4 +1,3 @@
-import React from "react";
 import "../assets/css/pageloader.css";
 import "../assets/js/pageloader.js";
 

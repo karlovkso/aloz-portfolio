@@ -1,50 +1,54 @@
-import React, { useState, useEffect } from "react";
-import Image1 from "../assets/images/vitaltrack/1.png";
-import Image2 from "../assets/images/vitaltrack/2.png";
-import Image3 from "../assets/images/vitaltrack/3.png";
-import Image4 from "../assets/images/vitaltrack/4.png";
-import Image5 from "../assets/images/vitaltrack/5.jpg";
-import Image6 from "../assets/images/vitaltrack/6.jpg";
-import Image77 from "../assets/images/vitaltrack/7.jpg";
-import Image7 from "../assets/images/vitaltrack/7.png";
-import Image8 from "../assets/images/vitaltrack/8.png";
-import Image9 from "../assets/images/vitaltrack/9.png";
-import Image10 from "../assets/images/vitaltrack/10.png";
-import Image11 from "../assets/images/vitaltrack/11.png";
-import Image12 from "../assets/images/vitaltrack/12.png";
-import Image13 from "../assets/images/vitaltrack/13.png";
-import Image14 from "../assets/images/vitaltrack/14.png";
-import Image15 from "../assets/images/vitaltrack/15.png";
-import Image16 from "../assets/images/vitaltrack/16.png";
-import Image17 from "../assets/images/vitaltrack/17.png";
+import { useEffect, useState } from "react";
+import { projectDetailImages, projectSlides } from "../config/projectGallery";
+import { scoreboardSlides } from "../config/scoreboardGallery";
+import DetailBlock from "../Components/DetailBlock";
+import SectionHeading from "../Components/SectionHeading";
 
-const webImages = [
-  Image1,
-  Image2,
-  Image3,
-  Image4,
-  Image7,
-  Image8,
-  Image9,
-  Image10,
-  Image11,
-  Image12,
-  Image13,
-  Image15,
-  Image14,
-  Image16,
-  Image17,
-];
+const scoreboardProject = {
+  label: "SCOREBOARD",
+  url: "https://karlovkso.github.io/scoreboard/",
+};
 
 export default function Projects() {
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [scoreboardImageIndex, setScoreboardImageIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % webImages.length);
+    const interval = window.setInterval(() => {
+      setCurrentImageIndex(
+        (previousIndex) => (previousIndex + 1) % projectSlides.length,
+      );
     }, 3000);
-    return () => clearInterval(interval);
+
+    return () => window.clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setScoreboardImageIndex(
+        (previousIndex) => (previousIndex + 1) % scoreboardSlides.length,
+      );
+    }, 3000);
+
+    return () => window.clearInterval(interval);
+  }, []);
+
+  const currentProjectImage = projectSlides[currentImageIndex];
+  const scoreboardProjectImage = scoreboardSlides[scoreboardImageIndex];
+
+  const openProjectModal = () => {
+    const modal = document.getElementById("vitaltrackModal");
+    if (modal) {
+      modal.showModal();
+    }
+  };
+
+  const openScoreboardModal = () => {
+    const modal = document.getElementById("scoreboardModal");
+    if (modal) {
+      modal.showModal();
+    }
+  };
 
   return (
     <div>
@@ -53,73 +57,99 @@ export default function Projects() {
         className="flex flex-col mr-24 md:flex-row md:justify-start mx-5 md:mx-20 pt-20"
       >
         <div className="text-base-content w-full md:w-2/3">
-          <div className="font-bold text-3xl md:text-4xl">
-            <p className="text-start md:text-left">Projects</p>
-          </div>
-          <div className="font-normal text-base md:text-lg mt-5 mb-14 ">
+          <SectionHeading>Projects</SectionHeading>
+          <DetailBlock className="mt-5 mb-14">
             <p>
               <button
+                type="button"
                 className="font-bold text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300"
-                onClick={() =>
-                  document.getElementById("my_modal_4").showModal()
-                }
+                onClick={openProjectModal}
               >
                 VITALTRACK{" "}
-                <i class="fa-sharp  fa-solid fa-up-right-and-down-left-from-center fa-xs"></i>
+                <i className="fa-sharp fa-solid fa-up-right-and-down-left-from-center fa-xs"></i>
               </button>
               <br />
               <span className="text-start">February 2025 - June 2025</span>
               <br />
               <span className="text-start">BSCpE Thesis</span>
               <br />
-              <span className="text-start">Full-Stack Software Engineer</span>
-              <br />
               <span className="text-start">
                 Languages Used: C#, Python, and C++
               </span>
             </p>
-          </div>
+          </DetailBlock>
           <div className="divider"></div>
-          <div className="font-normal text-base md:text-lg mt-10 mb-14 ">
+          <DetailBlock className="mt-10 mb-14">
             <p>
-              <button className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
-                COMING SOON...
-              </button>
+              <a
+                onClick={openScoreboardModal}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300"
+              >
+                {scoreboardProject.label}
+                <i className="fa-sharp fa-solid fa-up-right-and-down-left-from-center fa-xs ml-2"></i>
+              </a>
+              <br />
+              <span className="text-start">February 2026 - February 2026</span>
+              <br />
+              <span className="text-start">Self Project</span>
+              <br />
+              <span className="text-start">Languages Used: React JS</span>
             </p>
-          </div>
+          </DetailBlock>
           <div className="divider"></div>
-          <div className="font-normal text-base md:text-lg mt-10 mb-14 ">
+          <DetailBlock className="mt-10 mb-14">
             <p>
-              <button className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
+              <a className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
                 COMING SOON...
-              </button>
+              </a>
             </p>
-          </div>
+          </DetailBlock>
           <div className="divider"></div>
+          <DetailBlock className="mt-10 mb-14">
+            <p>
+              <a className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
+                COMING SOON...
+              </a>
+            </p>
+          </DetailBlock>
+          <div className="divider"></div>
+          <DetailBlock className="mt-10 mb-14">
+            <p>
+              <a className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
+                COMING SOON...
+              </a>
+            </p>
+          </DetailBlock>{" "}
         </div>
       </div>
-      <dialog id="my_modal_4" className="modal">
+      <dialog id="vitaltrackModal" className="modal">
         <div className="modal-box w-11/12 max-w-5xl">
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
               ✕
             </button>
           </form>
-          <img src={webImages[currentImage]} alt="Project" className="mt-5" />
+          <img
+            src={currentProjectImage}
+            alt="VitalTrack project gallery preview"
+            className="mt-5"
+          />
           <div className="flex gap-4 mt-5 justify-center">
             <img
-              src={Image5}
-              alt="Prototype"
+              src={projectDetailImages.fullView}
+              alt="VitalTrack prototype preview"
               className="h-36 sm:h-48 md:h-72 md:w-80"
             />
             <img
-              src={Image6}
-              alt="Prototype"
+              src={projectDetailImages.prototypeOne}
+              alt="VitalTrack interface preview"
               className="h-36 sm:h-48 md:h-72"
             />
             <img
-              src={Image77}
-              alt="Prototype"
+              src={projectDetailImages.prototypeTwo}
+              alt="VitalTrack hardware preview"
               className="h-36 sm:h-48 md:h-72 md:w-80"
             />
           </div>
@@ -152,7 +182,36 @@ export default function Projects() {
           </div>
         </div>
         <form method="dialog" className="modal-backdrop">
-          <button>close</button>
+          <button type="submit">close</button>
+        </form>
+      </dialog>
+      <dialog id="scoreboardModal" className="modal">
+        <div className="modal-box w-11/12 max-w-5xl">
+          <form method="dialog">
+            <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+              ✕
+            </button>
+          </form>
+          <div className="flex justify-center">
+            <a
+              href={scoreboardProject.url}
+              target="_blank"
+              className="font-bold italic text-xl md:text-2xl text-accent hover:text-primary transition-all duration-300"
+            >
+              GO TO SCOREBOARD {""}
+              <i className="fa-sharp fa-solid fa-link fa-xs"></i>
+            </a>
+          </div>
+          <div className="flex justify-center mt-5">
+            <img
+              src={scoreboardProjectImage}
+              alt="Scoreboard gallery preview"
+              className="rounded-xl"
+            />
+          </div>
+        </div>
+        <form method="dialog" className="modal-backdrop">
+          <button type="submit">close</button>
         </form>
       </dialog>
     </div>

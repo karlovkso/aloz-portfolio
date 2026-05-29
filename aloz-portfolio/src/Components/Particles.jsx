@@ -1,23 +1,43 @@
 import { useCallback, useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-
 import { loadFull } from "tsparticles";
+
 export default function Particle() {
-  const [init, setInit] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
+  const [hasInitializationError, setHasInitializationError] = useState(false);
+
   useEffect(() => {
-    console.log("init");
+    let isMounted = true;
+
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
-    }).then(() => {
-      setInit(true);
-    });
+    })
+      .then(() => {
+        if (isMounted) {
+          setIsInitialized(true);
+        }
+      })
+      .catch((error) => {
+        console.error("Failed to initialize particles engine", error);
+        if (isMounted) {
+          setHasInitializationError(true);
+        }
+      });
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
-  const particlesLoaded = (container) => {};
+  const particlesLoaded = useCallback(() => undefined, []);
+
+  if (hasInitializationError) {
+    return null;
+  }
 
   return (
     <>
-      {init && (
+      {isInitialized && (
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}

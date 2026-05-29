@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Skills from "./Pages/Skills";
@@ -11,7 +10,7 @@ import "./App.css";
 
 function App() {
   return (
-    <div basename="/aloz-portfolio">
+    <main className="relative min-h-screen">
       <Particles />
       <Header />
       <Sidebar />
@@ -20,7 +19,7 @@ function App() {
       <Experience />
       <Projects />
       <Footer />
-    </div>
+    </main>
   );
 }
 

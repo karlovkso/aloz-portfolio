@@ -1,13 +1,9 @@
-import React from "react";
 import Hero from "../assets/alo.webp";
+import { scrollToSection } from "../utils/scrollNavigation";
 
 export default function Home() {
-  // Scroll handler
   const handleScrollToSkills = () => {
-    const skillsSection = document.getElementById("skills");
-    if (skillsSection) {
-      skillsSection.scrollIntoView({ behavior: "smooth" });
-    }
+    scrollToSection("skills");
   };
 
   return (
@@ -17,7 +13,7 @@ export default function Home() {
           <p>
             Hello,
             <br />
-            I'm Karlo Vequiso
+            I&apos;m Karlo Vequiso
           </p>
           <p className="text-accent">Software Engineer</p>
         </div>
@@ -36,6 +32,7 @@ export default function Home() {
           <p className="mt-16 mb-0 sm:mb-36">
             Learn more{" "}
             <button
+              type="button"
               className="text-accent hover:text-accent hover:font-semibold transition duration-300"
               onClick={handleScrollToSkills}
             >
@@ -46,7 +43,7 @@ export default function Home() {
       </div>
 
       <div className="flex justify-center relative md:absolute w-full mr-5 z-40">
-        <img src={Hero} alt="Karlo Vequiso's Picture" className="w-96" />
+        <img src={Hero} alt="Portrait of Karlo Vequiso" className="w-96" />
       </div>
     </div>
   );

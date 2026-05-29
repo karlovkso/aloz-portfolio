@@ -1,5 +1,4 @@
-import React from "react";
-
+/* eslint-disable react/no-unknown-property */
 function IconPL() {
   return (
     <div className="mt-5 flex flex-wrap gap-3">
