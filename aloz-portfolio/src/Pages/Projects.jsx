@@ -81,7 +81,7 @@ export default function Projects() {
           <div className="divider"></div>
           <DetailBlock className="mt-10 mb-14">
             <p>
-              <a
+              <button
                 onClick={openScoreboardModal}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -89,7 +89,7 @@ export default function Projects() {
               >
                 {scoreboardProject.label}
                 <i className="fa-sharp fa-solid fa-up-right-and-down-left-from-center fa-xs ml-2"></i>
-              </a>
+              </button>
               <br />
               <span className="text-start">February 2026 - February 2026</span>
               <br />
@@ -101,25 +101,25 @@ export default function Projects() {
           <div className="divider"></div>
           <DetailBlock className="mt-10 mb-14">
             <p>
-              <a className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
+              <button className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
                 COMING SOON...
-              </a>
+              </button>
             </p>
           </DetailBlock>
           <div className="divider"></div>
           <DetailBlock className="mt-10 mb-14">
             <p>
-              <a className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
+              <button className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
                 COMING SOON...
-              </a>
+              </button>
             </p>
           </DetailBlock>
           <div className="divider"></div>
           <DetailBlock className="mt-10 mb-14">
             <p>
-              <a className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
+              <button className="font-bold italic text-3xl md:text-4xl text-accent hover:text-primary transition-all duration-300">
                 COMING SOON...
-              </a>
+              </button>
             </p>
           </DetailBlock>{" "}
         </div>
